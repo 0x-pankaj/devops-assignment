@@ -8,7 +8,7 @@ def read_root():
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int):
-    return {"itemd": item_id, "name": "Fake Item"}
+    return {"item_id": item_id, "name": "Fake Item"}
 
 @app.post("/items")
 def create_item(item_name: str):
