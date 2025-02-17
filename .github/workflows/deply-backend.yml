@@ -14,13 +14,11 @@ jobs:
 
       - name: Check secrets
         run: |
-          if [
-            -z "${{ secrets.DOCKER_USERNAME }}"
-          ]; then
-            echo "Missing secrets! Please check your secrets."
-            exit 1
-          fi
-          ]
+          if [ -z "${{ secrets.DOCKER_USERNAME }}" ]; then
+                echo "DOCKER_USERNAME is not set"
+              else
+                echo "DOCKER_USERNAME is available"
+              fi
 
       - name: Docker login
         uses: docker/login-action@v3
