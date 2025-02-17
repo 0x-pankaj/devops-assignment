@@ -16,20 +16,10 @@ jobs:
         run: |
           if [
             -z "${{ secrets.DOCKER_USERNAME }}"
-            -o -z "${{ secrets.DOCKER_PASSWORD }}"
           ]; then
             echo "Missing secrets! Please check your secrets."
             exit 1
           fi
-
-          if [
-            -z "${{ secrets.AWS_ACCESS_KEY_ID }}"
-            -o -z "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-          ]; then
-            echo "Missing secrets! Please check your secrets."
-            exit 1
-          fi
-
           ]
 
       - name: Docker login
