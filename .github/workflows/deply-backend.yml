@@ -29,7 +29,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: ./k8s-manifest
           file: ./k8s-manifest/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/k8s:${{ github.sha }}
