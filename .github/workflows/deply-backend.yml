@@ -3,8 +3,7 @@ name: Continuous Integration and Continuous Deployment
 on:
   push:
     branches:
-      - main
-        bug-fix
+      - bug-fix
 jobs:
   build:
     runs-on: ubuntu-latest
