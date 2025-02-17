@@ -36,4 +36,4 @@ jobs:
           context: .
           file: ./k8s/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/k8s:$GITHUB_SHA
+          tags: ${{ secrets.DOCKER_USERNAME }}/k8s:${{ github.sha }}
